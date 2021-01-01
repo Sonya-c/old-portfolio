@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+* {
+    --dark: #222831;
+    --gray: #e0ece4;
+    --white: #ffffff;
+    --yellow: #fbd46d;
+    --orange: #ed8240;
+    font-family: 'Arimo', sans-serif;
+}
+
+@keyframes welcome {
+    /* When the user entered to the page, this animation will be displaye */
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 100%;
+    }
+}
+
+.spin {
+    /* When the open menu button is clicked, change the direction */
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    /* welcome animation */
+    animation: welcome 1.5s;
+    /* Doing this to keep the footer at buttom (no matter what) */
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+
+/* Links site style */
+
+a {
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: var(--yellow);
+}
+
+footer a:hover {
+    color: var(--orange);
+}
+
+
+/* ---- NAV ----*/
+
+nav {
+    background-color: var(--dark);
+    /* In any case, the nav always gonna be at: */
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+nav a {
+    /* Nav elements style */
+    color: var(--gray);
+    box-sizing: border-box;
+    padding: 30px 15px 30px 15px;
+}
+
+nav a>* {
+    /* Rotation to open nav buttom
+     * select all spans to all looking the same at color change */
+    transition: 0.3s;
+}
+
+#this {
+    /* The current page */
+    font-weight: bold;
+    background-color: var(--orange);
+}
+
+.nav-text {
+    /* The text of the nav (display none if nav is closed) */
+    display: none;
+}
+
+
+/* --- MAIN ---*/
+
+main {
+    box-sizing: border-box;
+    padding: 10px;
+    /* Doing this to keep the footer at buttom (no matter what) */
+    flex: 1;
+}
+
+main.galery {
+    display: flex;
+}
+
+header>*,
+main.index>* {
+    /* Center everything (on home page) */
+    text-align: center;
+    max-width: 630px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1 {
+    font-family: 'Caveat', cursive;
+    font-size: 68px;
+}
+
+footer {
+    padding: 30px;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: var(--gray);
+}
+
+footer a {
+    color: var(--dark);
+    font-size: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+
+/* DESKTOP */
+
+@media only screen and (min-width: 768px) {
+    nav {
+        /* Put the nav al the left */
+        height: 100%;
+        min-width: 30px;
+        position: fixed;
+    }
+    nav a {
+        display: block;
+    }
+    nav~* {
+        margin-left: 50px;
+    }
+}
+
+
+/* MOBILE PHONES */
+
+@media only screen and (max-width: 768px) {
+    nav {
+        /* put the nav at the top */
+        position: sticky;
+        text-align: center;
+    }
+    nav a {
+        display: inline-block;
+    }
+    main,
+    footer {
+        width: 100%;
+    }
+}
