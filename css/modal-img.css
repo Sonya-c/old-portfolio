@@ -8,16 +8,21 @@
     position: fixed;
     left: 0;
     top: 0;
-    z-index: 1;
     margin-left: 0;
     /* the others */
     overflow-y: auto;
     background-color: rgba(0, 0, 0, 0.9);
 }
 
+#modal-img::after {
+    height: 50px;
+}
+
 #modal-img>img {
     width: 50%;
+    padding-bottom: 100px;
     margin: auto;
+    object-fit: contain;
     display: block;
 }
 
@@ -33,11 +38,6 @@
 #close-modal-img:hover {
     cursor: pointer;
 }
-
-
-/* DESKTOP */
-
-@media only screen and (min-width: 768px) {}
 
 
 /* MOBILE PHONES */
