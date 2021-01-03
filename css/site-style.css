@@ -19,12 +19,6 @@
     }
 }
 
-.spin {
-    /* When the open menu button is clicked, change the direction */
-    -webkit-transform: rotate(180deg);
-    transform: rotate(180deg);
-}
-
 html,
 body {
     margin: 0;
@@ -124,7 +118,7 @@ footer {
 
 footer a {
     color: var(--dark);
-    font-size: 30px;
+    font-size: 40px;
     padding-left: 30px;
     padding-right: 30px;
 }
