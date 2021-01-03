@@ -1,0 +1,62 @@
+#modal-img {
+    width: 100%;
+    height: 100%;
+    padding-top: 50px;
+    /* By default is not open */
+    display: none;
+    /* set position */
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    margin-left: 0;
+    /* the others */
+    overflow-y: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+#modal-img>img {
+    width: 50%;
+    margin: auto;
+    display: block;
+}
+
+#close-modal-img {
+    font-size: 40px;
+    color: #ffffff;
+    /* Put at the corner */
+    position: absolute;
+    top: 15px;
+    right: 35px;
+}
+
+#close-modal-img:hover {
+    cursor: pointer;
+}
+
+
+/* DESKTOP */
+
+@media only screen and (min-width: 768px) {}
+
+
+/* MOBILE PHONES */
+
+@media only screen and (max-width: 768px) {
+    #close-modal-img,
+    #modal-img>img {
+        /* center them */
+        position: absolute;
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+    #close-modal-img {
+        top: 25%;
+        right: 10px;
+    }
+    #modal-img>img {
+        margin: 0;
+        top: 50%;
+        width: 100%;
+    }
+}

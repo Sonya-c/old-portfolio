@@ -33,6 +33,8 @@ function menuResponsive() {
         MAIN.style.width = "calc( 100% - " + menuWidth + "px";
         FOOTER.style.marginLeft = menuWidth + "px";
         FOOTER.style.width = "calc( 100% - " + menuWidth + "px";
+        MODAL.style.marginLeft = menuWidth + "px";
+        MODAL.style.width = "calc( 100% - " + menuWidth + "px";
     } else {
         HEADER.style.marginLeft = "0px";
         HEADER.style.width = "100%";
@@ -40,5 +42,7 @@ function menuResponsive() {
         MAIN.style.width = "100%";
         FOOTER.style.marginLeft = "0px";
         FOOTER.style.width = "100%";
+        MODAL.style.marginLeft = "0px";
+        MODAL.style.width = "100%";
     }
 }

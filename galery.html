@@ -16,6 +16,13 @@
 </head>
 
 <body>
+    <!-- modal img  -->
+    <div id="modal-img">
+        <img id="modal-img-image" alt="imagen no encontrada">
+        <span id="close-modal-img" onclick="closeModal()">&times;</span>
+
+    </div>
+
     <nav>
         <a href="#0" title="Abrir el menu" onclick="openMenuBar();"><span id="menuButton" class="fas fa-chevron-circle-right"></span><span class="nav-text">&nbsp; Colapsar</span></a>
         <a href="/" title="Home"><span class="fas fa-home"></span><span  class="nav-text">&nbsp; Home</span></a>
@@ -29,7 +36,25 @@
     </header>
 
     <main class="galery">
+        <article class="card vertical-card link" onclick="openModal( (this.children)[0] )">
+            <img src="/img/physicalbox.github.io.jpg" alt="Avatar">
+        </article>
 
+        <article class="card vertical-card link" onclick="openModal( (this.children)[0] )">
+            <img src="/img/physicalbox.github.io.jpg" alt="Avatar">
+        </article>
+
+        <article class="card vertical-card link" onclick="openModal( (this.children)[0] )">
+            <img src="/img/physicalbox.github.io.jpg" alt="Avatar">
+        </article>
+
+        <article class="card vertical-card link" onclick="openModal( (this.children)[0] )">
+            <img src="/img/physicalbox.github.io.jpg" alt="Avatar">
+        </article>
+
+        <article class="card vertical-card link" onclick="openModal( (this.children)[0] )">
+            <img src="/img/physicalbox.github.io.jpg" alt="Avatar">
+        </article>
     </main>
 
     <footer>
@@ -38,8 +63,15 @@
     </footer>
 
     <script src="/JS/controler.js"></script>
+    <script src="JS/modalImg.js"></script>
+    <!-- styles -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="css/card-styles.css">
+    <link rel="stylesheet" href="css/modal-img.css">
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Arimo&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
 </body>
 
 </html>
