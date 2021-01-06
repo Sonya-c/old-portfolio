@@ -113,10 +113,11 @@ h1 {
 }
 
 footer {
-    padding: 10px;
+    padding: 30px;
     box-sizing: border-box;
     text-align: center;
     color: var(--dark);
+    background-color: var(--gray);
 }
 
 footer a {
