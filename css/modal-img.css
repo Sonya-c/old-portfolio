@@ -1,8 +1,8 @@
 #modal-img {
     width: 100%;
     height: 100%;
-    max-height: 100%;
     padding-top: 50px;
+    padding-bottom: 50px;
     box-sizing: border-box;
     /* By default is not open */
     display: none;
@@ -10,19 +10,23 @@
     position: fixed;
     left: 0;
     top: 0;
-    margin-left: 0;
+    z-index: 2;
     /* the others */
     overflow-y: auto;
     background-color: rgba(0, 0, 0, 0.9);
 }
 
-#modal-img>img {
+#modal-img img, #modal-img div{
     width: 50%;
-    height: calc(100% - 25px);
-    box-sizing: border-box;
     margin: auto;
-    object-fit: contain;
+    color: white;
+    box-sizing: border-box;
+}
+
+#modal-img img {
     display: block;
+    object-fit: contain;
+    height: calc(100% - 25px);
 }
 
 #close-modal-img {
@@ -32,30 +36,20 @@
     position: absolute;
     top: 15px;
     right: 35px;
+    z-index: 3;
 }
 
-#close-modal-img:hover {
-    cursor: pointer;
-}
-
+#close-modal-img:hover { cursor: pointer; }
 
 /* MOBILE PHONES */
-
 @media only screen and (max-width: 768px) {
-    #close-modal-img,
-    #modal-img>img {
-        /* center them */
-        position: absolute;
-        -ms-transform: translateY(-50%);
-        transform: translateY(-50%);
-    }
     #close-modal-img {
-        top: 100px;
-        right: 10px;
+        top: 30px;
+        right: 30px;
     }
-    #modal-img>img {
-        margin: 0;
-        top: 50%;
+
+    #modal-img img {
+        margin-top: 30px;
         width: 100%;
     }
 }

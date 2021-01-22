@@ -5,83 +5,82 @@
     <title>Sonya-c | galery </title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/site-style.css">
-
     <meta name="description" content="Aquí encontraras algunos de mis Dibujos" />
     <meta name="keywords" content="galeria, dibujos, pinturas" />
     <meta name="author" content="Sonya Castro" />
-
     <meta name="robots" content="index" />
     <meta name="robots" content="follow" />
+
+    <link rel="stylesheet" href="css/site-style.css">
 </head>
 
 <body>
     <!-- modal img  -->
     <div id="modal-img">
-        <img id="modal-img-image" alt="imagen no encontrada">
         <span id="close-modal-img" onclick="closeModal()">&times;</span>
-        <div>&nbsp;</div>
+        <img id="modal-img-image" alt="imagen no encontrada">
+        <div></div>
     </div>
 
     <nav>
-        <a href="#0" title="Abrir el menu" onclick="openMenuBar();"><span id="menuButton" class="fas fa-chevron-circle-right"></span><span class="nav-text">&nbsp; Colapsar</span></a>
+        <img src="img/me.png" alt="">
+        <hr>
         <a href="https://sonya-c.com.co/" title="Home"><span class="fas fa-home"></span><span  class="nav-text">&nbsp; Home</span></a>
         <a href="https://sonya-c.com.co/projects" title="Mis proyectos"><span class="fas fa-code"></span><span class="nav-text">&nbsp; Mis proyectos</span></a>
         <a href="https://sonya-c.com.co/galery" id="this" title="Dibujos"><span class="fas fa-pencil-ruler"></span><span class="nav-text">&nbsp; Dibujos</span></a>
-        <!-- <a href="https://sonya-c.com.co/coffee" title="Coffee"><span class="fas fa-mug-hot"></span><span class="nav-text">&nbsp; Tomemos un cafe</span></a> -->
     </nav>
 
     <header>
         <h1>Dibujos</h1>
     </header>
 
-    <main class="galery">
+    <main class="galery galery-imgs">
         <article class="card vertical-card link" onclick="openModal( (this.children)[0] )">
-            <img src="/img/galery/01.jpg" class="card-img galery-img" alt="Barco puntillismo">
+            <img src="/img/galery/01.jpg" class="card-img" alt="Barco puntillismo">
         </article>
 
         <article class="card vertical-card link" onclick="openModal( (this.children)[0] )">
-            <img src="/img/galery/02.jpg" class="card-img galery-img" alt="Stan lee puntillismo">
+            <img src="/img/galery/02.jpg" class="card-img" alt="Stan lee puntillismo">
         </article>
 
         <article class="card vertical-card link" onclick="openModal( (this.children)[0] )">
-            <img src="/img/galery/03.jpg" class="card-img galery-img" alt="Dibujo puntillismo">
+            <img src="/img/galery/03.jpg" class="card-img" alt="Dibujo puntillismo">
         </article>
 
         <article class="card vertical-card link" onclick="openModal( (this.children)[0] )">
-            <img src="/img/galery/04.jpg" class="card-img galery-img" alt="Dibujo puntillismo">
+            <img src="/img/galery/04.jpg" class="card-img" alt="Dibujo puntillismo">
         </article>
 
         <article class="card vertical-card link" onclick="openModal( (this.children)[0] )">
-            <img src="/img/galery/05.jpg" class="card-img galery-img" alt="Dibujo digital">
+            <img src="/img/galery/05.jpg" class="card-img" alt="Dibujo digital">
         </article>
 
         <article class="card vertical-card link" onclick="openModal( (this.children)[0] )">
-            <img src="/img/galery/06.jpg" class="card-img galery-img" alt="The dragon prince fan art Dibujo digital">
+            <img src="/img/galery/06.jpg" class="card-img" alt="The dragon prince fan art Dibujo digital">
         </article>
 
         <article class="card vertical-card link" onclick="openModal( (this.children)[0] )">
-            <img src="/img/galery/07.jpg" class="card-img galery-img" alt="The dragon prince fan art Dibujo digital">
+            <img src="/img/galery/07.jpg" class="card-img" alt="The dragon prince fan art Dibujo digital">
         </article>
 
         <article class="card vertical-card link" onclick="openModal( (this.children)[0] )">
-            <img src="/img/galery/08.jpg" class="card-img galery-img" alt="The dragon prince fan art Dibujo digital">
+            <img src="/img/galery/08.jpg" class="card-img" alt="The dragon prince fan art Dibujo digital">
         </article>
 
         <article class="card vertical-card link" onclick="openModal( (this.children)[0] )">
-            <img src="/img/galery/09.jpg" class="card-img galery-img" alt="Infinity train fan art Dibujo digital">
+            <img src="/img/galery/09.jpg" class="card-img" alt="Infinity train fan art Dibujo digital">
         </article>
 
         <article class="card vertical-card link" onclick="openModal( (this.children)[0] )">
-            <img src="/img/galery/10.jpg" class="card-img galery-img" alt="Steven Universe fan art Dibujo digital">
+            <img src="/img/galery/10.jpg" class="card-img" alt="Steven Universe fan art Dibujo digital">
         </article>
 
         <article class="card vertical-card link" onclick="openModal( (this.children)[0] )">
-            <img src="/img/galery/11.jpg" class="card-img galery-img" alt="The dragon prince fan art Dibujo digital">
+            <img src="/img/galery/11.jpg" class="card-img" alt="The dragon prince fan art Dibujo digital">
         </article>
 
         <article class="card vertical-card link" onclick="openModal( (this.children)[0] )">
-            <img src="/img/galery/12.jpg" class="card-img galery-img" alt="Steven Universe fan art Dibujo digital">
+            <img src="/img/galery/12.jpg" class="card-img" alt="Steven Universe fan art Dibujo digital">
         </article>
     </main>
 
@@ -92,11 +91,9 @@
 
     <script src="/JS/controler.js"></script>
     <script src="JS/modalImg.js"></script>
-    <!-- styles -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
     <link rel="stylesheet" href="css/card-styles.css">
     <link rel="stylesheet" href="css/modal-img.css">
-    <!-- fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Arimo&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">

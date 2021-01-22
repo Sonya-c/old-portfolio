@@ -7,22 +7,16 @@
     font-family: 'Arimo', sans-serif;
 }
 
-.tree {
-    list-style: none;
-}
+.tree { list-style: none; }
 
-.tree a {
-    color: var(--orange);
-}
+.tree a { color: var(--orange); }
+
+a { text-decoration: none; }
 
 @keyframes welcome {
     /* When the user entered to the page, this animation will be displaye */
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 100%;
-    }
+    from { opacity: 0; }
+    to { opacity: 100%; }
 }
 
 html,
@@ -37,24 +31,7 @@ body {
     flex-direction: column;
 }
 
-
-/* Links site style */
-
-a {
-    text-decoration: none;
-}
-
-nav a:hover {
-    color: var(--yellow);
-}
-
-footer a:hover {
-    color: var(--orange);
-}
-
-
 /* ---- NAV ----*/
-
 nav {
     background-color: var(--dark);
     /* In any case, the nav always gonna be at: */
@@ -63,46 +40,27 @@ nav {
     z-index: 1;
 }
 
-nav a {
-    /* Nav elements style */
+nav a, nav img {
     color: var(--gray);
+    margin: 20px;
+    padding: 10px;
+    border-radius: 5px;
     box-sizing: border-box;
-    padding: 30px 15px 30px 15px;
 }
 
-nav a>* {
-    /* Rotation to open nav buttom
-     * select all spans to all looking the same at color change */
-    transition: 0.3s;
+nav a:hover {
+    color: var(--dark);
+    background-color:  var(--yellow) !important;
+}
+nav img, nav hr {
+    padding: 0;
+    max-width: calc(200px - 40px);
+    background-color: var(--gray);
 }
 
 #this {
-    /* The current page */
-    font-weight: bold;
-    background-color: var(--orange);
-}
-
-.nav-text {
-    /* The text of the nav (display none if nav is closed) */
-    display: none;
-}
-
-
-/* --- MAIN ---*/
-
-main {
-    box-sizing: border-box;
-    padding: 10px;
-    /* Doing this to keep the footer at buttom (no matter what) */
-    flex: 1;
-}
-
-header>*,
-main.index>* {
-    /* Center everything (on home page) */
-    text-align: center;
-    max-width: 630px;
-    margin: auto;
+    color: var(--dark); 
+    background-color: var(--orange) 
 }
 
 h1 {
@@ -110,6 +68,21 @@ h1 {
     font-size: 68px;
     margin-top: 10px;
     margin-bottom: 10px;
+}
+
+header,main,footer {
+    margin-top: 30px;
+}
+main {
+    /* Doing this to keep the footer at buttom (no matter what) */
+    flex: 1;
+}
+
+header>*,
+main.index>p {
+    text-align: center;
+    max-width: 500px;
+    margin: auto;
 }
 
 footer {
@@ -124,21 +97,20 @@ footer a {
     color: var(--orange);
 }
 
-
 /* DESKTOP */
-
 @media only screen and (min-width: 768px) {
     nav {
         /* Put the nav al the left */
         height: 100%;
-        min-width: 30px;
+        width: 200px;
         position: fixed;
     }
     nav a {
         display: block;
     }
-    nav~* {
-        margin-left: 50px;
+    main, header, footer{
+        margin-left: 200px;
+        width: calc(100% - 200px);
     }
 }
 
@@ -147,14 +119,12 @@ footer a {
 
 @media only screen and (max-width: 768px) {
     nav {
-        position: sticky;
         text-align: center;
     }
     nav a {
         display: inline-block;
     }
-    main,
-    footer {
+    header,main,footer {
         width: 100%;
     }
 }
