@@ -7,10 +7,6 @@
     font-family: 'Arimo', sans-serif;
 }
 
-.tree { list-style: none; }
-
-.tree a { color: var(--orange); }
-
 a { text-decoration: none; }
 
 @keyframes welcome {
