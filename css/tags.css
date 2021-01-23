@@ -1,0 +1,45 @@
+.tags {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: 30px;
+}
+
+.tag {
+	display: block;
+	background: #fbd46d;
+	max-width: 180px;
+	min-width: 180px;
+	padding: 10px;
+	margin: 5px;
+	border-radius: 5px;
+	color: #222831;
+	font-weight: bold;
+	flex: 1;
+	transition: 0.15s;
+}
+
+footer .tag {
+	background: transparent;
+	border: 1px solid #222831;
+}
+
+footer .tag:hover {
+	filter: brightness(1);
+	background-color: #222831;
+	color: #e0ece4;
+}
+
+.tag-java {
+	background-color: #e79c2a;
+}
+
+.tag-javaScript {
+	background-color: #a2de96;
+}
+.tag-python {
+	background-color: #3ca59d;
+}
+.tag-HTMLyCSS {
+	background-color: #a98b98;
+}
