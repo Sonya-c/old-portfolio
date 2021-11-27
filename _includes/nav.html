@@ -1,0 +1,16 @@
+<nav>
+  {% include toggle-theme.html %}
+
+  {% for item in site.data.navigation %}
+   
+    <a
+      href="{{ item.link }}"
+      
+      title="{{ item.name }}"
+      class="nav-link {% if page.permalink == item.link %} active {% endif %}">
+      <span class="emoji">{{ item.emoji }}</span>
+      <span class="title">{{ item.name | capitalize}}</span>
+    </a>
+
+  {% endfor %}
+</nav>

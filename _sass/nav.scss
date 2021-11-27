@@ -1,0 +1,62 @@
+nav {
+    padding: 5px;
+    margin: auto;
+    width: fit-content;
+
+    .nav-link {
+        display: inline-block;
+        text-decoration: none;
+        padding: 5px;
+        margin: 0px 5px 0px 5px;
+        border-radius: 5px;
+        text-align: center;
+        background-color: rgba(233, 137, 47, 1);
+        // Background animation
+        background: transparent;
+        background: linear-gradient(to right, #e9892f, #e9892f 50%, transparent 50%);
+        background-size: 200% 100%;
+        background-position: 100%;
+        transition: background-position 275ms ease;
+        cursor: pointer;
+
+        &:hover {
+            color: black !important;
+            background-position: 0 100%;
+        }
+    }
+
+    .active {
+        color: white;
+        background: #e02f65;
+
+        &:hover {
+            color: white;
+        }
+    }
+
+    .emoji {
+        font-size: large;
+    }
+
+    @media screan and (max-width: 450px) {
+        .title {
+            width: 0;
+            height: 0;
+        }
+    }
+}
+
+@mixin theme($name, $font-color, $font-color-active) {
+    html.#{$name} {
+        .nav-link {
+            color: $font-color;
+        }
+
+        .active {
+            color: $font-color-active;
+        }
+    }
+}
+
+@include theme('light', #000000, #FFFFFF);
+@include theme('dark', #FFFFFF, #FFFFFF);

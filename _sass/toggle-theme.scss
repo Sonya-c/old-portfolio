@@ -1,0 +1,18 @@
+#toggle-theme-btn {
+    cursor: pointer;
+    font-size: large;
+    border-radius: 40px;
+    content: 'hola';
+}
+
+@mixin theme($name, $bg-color, $border-color) {
+    html.#{$name} {
+        #toggle-theme-btn {
+            background: $bg-color;
+            border: solid 4px $border-color;
+        }
+    }
+}
+
+@include theme('light', #FFF, lightgray);
+@include theme('dark', #4d4d4d, #e02f65);

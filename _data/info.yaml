@@ -1,0 +1,13 @@
+name: "Sonya Castro"
+photo: "assets/images/me.png"
+short-description: "Student"
+description: ""
+social-media:
+  - name: "github"
+    link: 
+    username: "sonya-c"
+    icon: "fab fa-github"
+  - name: "Stackover Flow"
+    link:
+    uesrname:
+    icon: "fab fa-stack-overflow"

@@ -1,0 +1,17 @@
+<aside>
+
+    <div class="information">
+        <img src="{{ site.data.info.photo }}" alt="{{ site.data.info.name }}" class="my-photo"/>
+    
+        <h1 class="my-name">{{ site.data.info.name }}</h1>
+        <p class="short-description">{{ site.data.info.short-description }}</p>
+        <p class="description">{{ site.data.info.description }}</p>
+    </div>
+
+    <div class="body">
+        {% for item in site.data.info.social-media %}
+
+        {% endfor %}
+    </div>
+
+</aside>
