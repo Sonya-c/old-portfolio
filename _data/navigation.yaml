@@ -1,4 +1,10 @@
-- name: home
-  link: /
-- name: blog
-  link: /blog
+en:
+  - name: home
+    link: /
+  - name: projects
+    link: /en/projects
+es: 
+  - name: inicio
+    link: /es/
+  - name: proyectos
+    link: /es/proyectos

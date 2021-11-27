@@ -1,13 +1,16 @@
-#toggle-theme-btn {
+.toggle-btn {
     cursor: pointer;
     font-size: large;
     border-radius: 40px;
     content: 'hola';
+    padding: 4px;
+    text-decoration: none;
+    display: inline-block;
 }
 
 @mixin theme($name, $bg-color, $border-color) {
     html.#{$name} {
-        #toggle-theme-btn {
+        .toggle-btn {
             background: $bg-color;
             border: solid 4px $border-color;
         }

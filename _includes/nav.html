@@ -1,13 +1,25 @@
 <nav>
   {% include toggle-theme.html %}
+  {% include toggle-lang.html %}
 
-  {% for item in site.data.navigation %}
-   
+  {% if page.lang == "es" %}
+    {% assign navigation = site.data.navigation.es %}
+  {% else %}
+    {% assign navigation = site.data.navigation.en %}
+  {% endif %}
+
+  {% for item in navigation %}
+    {% if page.permalink == item.link %}      
+      {% assign active = "active" %} 
+    {% else %}
+      {% assign active = "" %} 
+    {% endif %}
+
     <a
-      href="{{ item.link }}"
-      
+      href="{{ item.link | | absolute_url }}"
       title="{{ item.name }}"
-      class="nav-link {% if page.permalink == item.link %} active {% endif %}">
+      class="nav-link {{active}}">
+      
       <span class="emoji">{{ item.emoji }}</span>
       <span class="title">{{ item.name | capitalize}}</span>
     </a>

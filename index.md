@@ -1,6 +1,9 @@
 ---
+title: Home
 layout: default
+lang: en
+lang-ref: /es/
 permalink: /
 ---
 
-# Hola mundo, soy sonya
+# Hi, I'm Sonya
