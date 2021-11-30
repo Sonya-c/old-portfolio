@@ -1,6 +1,6 @@
 function changeTheme(){
     let button = document.querySelector('#toggle-theme-btn');
-    let emoji = document.querySelector('#toggle-theme-btn.emoji');
+    let emoji = document.querySelector('#toggle-theme-emoji');
 
     let currentTheme = document.documentElement.classList.contains('light');
 

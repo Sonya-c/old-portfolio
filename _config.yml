@@ -9,6 +9,7 @@ github_username: sonya-c
 # Build settings
 plugins:
   - jekyll-feed
+  - jemoji
 
 sass:
   sass_dir: _sass

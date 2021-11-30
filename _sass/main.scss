@@ -23,7 +23,7 @@ h1 {
     text-align: center;
 }
 
-span.emoji {
+span.emoji, img.emoji {
     vertical-align: middle;
 }
 
@@ -58,14 +58,12 @@ body {
             max-width: 600px;
             margin: auto;
 
-            h1 {
-                font-size: 68px;
-            }
+            /* h1 {font-size: 68px; } */
         }
     }
 }
 
-@mixin theme($name, $bg-color, $main-color, $text-color) {
+@mixin theme($name, $bg-color, $main-color, $text-color, $link-color) {
     html.#{$name} {
         body {
             background-color: $bg-color;
@@ -75,11 +73,19 @@ body {
 
                 .content {
                     color: $text-color;
+                    overflow-y: scroll;
+                    width: 80%;
+                    max-width: 800px;
+                    max-height: 80%;
+                
+                    a {
+                        color: $link-color;
+                    }
                 }
             }
         }
     }
 }
 
-@include theme('light', #F2F2F2, #FFF, #202020);
-@include theme('dark', #202020, #313131, #F2F2F2);
+@include theme('light', #F2F2F2, #FFF, #202020, #a0163f);
+@include theme('dark', #202020, #313131, #F2F2F2, #fd9d44);
