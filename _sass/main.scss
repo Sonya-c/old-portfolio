@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
 
-@import "aside", "toggle-theme", "nav";
+@import "aside", "toggle-btn", "nav", "scroll-bar";
 
 * {
     font-family: 'Work Sans', sans-serif;
@@ -23,7 +23,8 @@ h1 {
     text-align: center;
 }
 
-span.emoji, img.emoji {
+span.emoji,
+img.emoji {
     vertical-align: middle;
 }
 
@@ -56,6 +57,7 @@ body {
         .content {
             padding: 10px;
             max-width: 600px;
+            height: 100%;
             margin: auto;
 
             /* h1 {font-size: 68px; } */
@@ -73,11 +75,16 @@ body {
 
                 .content {
                     color: $text-color;
-                    overflow-y: scroll;
+                    overflow-y: auto;
                     width: 80%;
                     max-width: 800px;
                     max-height: 80%;
-                
+
+                    img:not(.emoji) {
+                        display: block;
+                        margin: auto;
+                    }
+
                     a {
                         color: $link-color;
                     }

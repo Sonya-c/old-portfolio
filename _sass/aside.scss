@@ -7,7 +7,6 @@
 
 @media screen and (min-width: 640px) {
     aside {
-        height: calc(100% - 40px);
         width: 200px;
     }
 }
@@ -25,7 +24,7 @@ aside {
             height: 150px;
             border-radius: 50%;
             border: solid 3px rgb(160, 22, 63);
-            background: #e02f65;
+            background: rgb(224, 46, 100);
             // background: linear-gradient(-45deg, #ee7752, , #23a6d5, #23d5ab);
             background: linear-gradient(58deg, rgb(170, 33, 74), rgba(224, 47, 101, 1), rgba(233, 137, 47, 1), rgb(253, 157, 68));
             background-size: 300% 300%;

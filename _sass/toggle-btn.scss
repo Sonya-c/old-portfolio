@@ -1,0 +1,44 @@
+.toggle-btn {
+    cursor: pointer;
+    font-size: large;
+    border-radius: 40px;
+    content: 'hola';
+    padding: 4px;
+    text-decoration: none;
+    display: inline-block;
+
+    &.font-size>button {
+        cursor: pointer;
+        color: inherit;
+        padding: 4px;
+        border: none;
+        background: none;
+        transition: 0s;
+
+        &.left-button {
+            border-radius: 40px 0px 0px 40px;
+        }
+
+        &.right-button {
+            border-radius: 0px 40px 40px 0px;
+        }
+    }
+
+}
+
+@mixin theme($name, $bg-color, $border-color, $text-color, $active-color) {
+    html.#{$name} {
+        .toggle-btn {
+            background: $bg-color;
+            border: solid 4px $border-color;
+            color: $text-color;
+
+            &.font-size>button:active {
+                background-color: $active-color;
+            }
+        }
+    }
+}
+
+@include theme('light', #FFF, lightgray, black, #fd9d44);
+@include theme('dark', #4d4d4d, #e02f65, white, #e02f65);
