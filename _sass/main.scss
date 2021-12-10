@@ -53,10 +53,19 @@ body {
 
         -webkit-box-shadow: 1px 5px 15px -4px rgba(0, 0, 0, 0.39);
         box-shadow: 1px 5px 15px -4px rgba(0, 0, 0, 0.39);
+        transition: .5s;
+
+        &.fullscream {
+            z-index: 99;
+            width: calc(100% - 10px);
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 10px;
+        }
 
         .content {
             padding: 10px;
-            max-width: 600px;
             height: 100%;
             margin: auto;
 
@@ -72,6 +81,10 @@ body {
 
             main {
                 background-color: $main-color;
+
+                #post {
+                    background-color: $main-color;
+                }
 
                 .content {
                     color: $text-color;
