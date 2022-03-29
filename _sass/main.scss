@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
 
-@import "aside", "toggle-btn", "nav", "scroll-bar";
+@import "aside", "toggle-btn", "nav", "footer", "scroll-bar";
 
 * {
     font-family: 'Work Sans', sans-serif;
@@ -34,14 +34,15 @@ img.emoji {
 
         main {
             width: calc(100% - 200px);
-            border-radius: 30px 0px 0px 30px;
+            border-radius: 10px 0px 0px 10px;
         }
     }
 }
 
 @media screen and (max-width: 640px) {
     main {
-        border-radius: 30px 30px 0px 0px;
+        border-radius: 10px 10px 0px 0px;
+        // height: auto !important;
     }
 }
 
@@ -55,21 +56,18 @@ body {
         box-shadow: 1px 5px 15px -4px rgba(0, 0, 0, 0.39);
         transition: .5s;
 
-        &.fullscream {
-            z-index: 99;
-            width: calc(100% - 10px);
-            height: 100%;
-            position: fixed;
-            top: 0;
-            left: 10px;
-        }
 
         .content {
-            padding: 10px;
-            height: 100%;
             margin: auto;
+            overflow-y: auto;
+            width: 80%;
+            max-width: 800px;
+            height: calc(100% - 30px);
 
-            /* h1 {font-size: 68px; } */
+            img:not(.emoji) {
+                display: block;
+                margin: auto;
+            }
         }
     }
 }
@@ -88,15 +86,6 @@ body {
 
                 .content {
                     color: $text-color;
-                    overflow-y: auto;
-                    width: 80%;
-                    max-width: 800px;
-                    max-height: 80%;
-
-                    img:not(.emoji) {
-                        display: block;
-                        margin: auto;
-                    }
 
                     a {
                         color: $link-color;

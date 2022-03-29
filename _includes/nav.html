@@ -1,12 +1,15 @@
+{% if page.lang == "es" %}
+  {% assign navigation = site.data.navigation.es %}
+{% else %}
+  {% assign navigation = site.data.navigation.en %}
+{% endif %}
+
 <nav>
+  <div class="nav-header">
+    <!-- <button>|||</button> -->
+  </div>
 
-  {% if page.lang == "es" %}
-    {% assign navigation = site.data.navigation.es %}
-  {% else %}
-    {% assign navigation = site.data.navigation.en %}
-  {% endif %}
-
-  <div>
+  <div class="nav-body collapse">
     {% for item in navigation %}
       
     {% if page.permalink == item.link %}      
@@ -25,11 +28,4 @@
       </a>
     {% endfor %}
   </div>
-
-  <div class="right">
-    {% include toggle-theme.html %}
-    {% include toggle-lang.html %}
-    {% include toggle-fullscream.html %}
-  </div>
-
 </nav>

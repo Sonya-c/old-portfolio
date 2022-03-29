@@ -1,9 +1,9 @@
 ---
-title: Inicio
-layout: default
+title: Hola, Soy Sonya
+layout: home
 lang: es
 lang-ref: /
 permalink: /es/
 ---
 
-# Hola, Soy Sonya
+Hola, soy Sonya, desarrolladora junior y estudiante de ingeniería de sistemas.

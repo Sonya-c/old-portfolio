@@ -1,0 +1,20 @@
+---
+layout: default
+---
+<link rel="stylesheet" href="{{ '/assets/css/landing.css' | absolute_url }}">
+
+<div class="home">
+    <h1>Hola, Soy Sonya</h1>
+    <div>
+        {{ content }}
+    </div>
+
+    <div class="skills">
+        {% for skill in site.data.info.skills %}
+            <span class="skill">
+                <span class="{{skill.logo}}"></span>
+                <span>{{skill.name}}</span>
+            </span>
+        {% endfor %}
+    </div>
+</div>

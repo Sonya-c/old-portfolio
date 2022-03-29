@@ -1,22 +1,11 @@
-.right {
-    float: right;
-}
-
 nav {
-    padding: 5px;
     margin: auto;
-    width: fit-content;
-
-    >div {
-        display: inline-block;
-        width: fit-content;
-    }
 
     .nav-link {
-        display: inline-block;
+        display: block;
         text-decoration: none;
         padding: 5px;
-        margin: 0px 5px 0px 5px;
+        margin: 5px 0px 5px 0px;
         border-radius: 5px;
         text-align: center;
         background-color: rgba(233, 137, 47, 1);

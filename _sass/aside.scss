@@ -32,6 +32,10 @@ aside {
         }
     }
 
+    .confi {
+        text-align: center;
+    }
+
 }
 
 @keyframes gradient {
@@ -48,11 +52,17 @@ aside {
     }
 }
 
-@mixin theme($name, $text-color) {
+@mixin theme($name, $text-color, $link-color) {
     html.#{$name} {
         color: $text-color;
+
+        .social-media {
+            a {
+                color: $link-color;
+            }
+        }
     }
 }
 
-@include theme('light', #202020);
-@include theme('dark', lightgray);
+@include theme('light', #202020, #a0163f);
+@include theme('dark', lightgray, #fd9d44);

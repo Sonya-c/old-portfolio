@@ -1,0 +1,10 @@
+<footer>
+    <div class="social-media">
+        {% for item in site.data.info.social-media %}
+            <a target="_black" href="{{item.link}}">
+                <span class="{{item.icon}}"></span>
+                <span>{{item.name}}</span>
+            </a>        
+        {% endfor %}
+    </div>
+</footer>
