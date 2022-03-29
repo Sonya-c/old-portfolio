@@ -1,0 +1,35 @@
+name: "Sonya Castro"
+photo: "assets/images/me.png"
+short-description: "Student"
+description:
+  - en: >- 
+      "Hello, I'm sonya."
+  - es:
+skills:
+  - name: React.js
+    logo: fab fa-react
+    color: 
+  - name: Python
+    logo: fab fa-python
+    color:
+  - name: Java
+    logo: fab fa-java
+    color:
+  - name: JavaScript
+    logo: fab fa-js
+    color:
+  - name: Bootstrap
+    logo: fab fa-bootstrap
+    color: #7952b3
+social-media:
+  - name: "github"
+    link: https://github.com/Sonya-c
+    username: "sonya-c"
+    icon: "fab fa-github"
+  - name: "instagram"
+    link: ""
+    icon: "fa-brands fa-instagram"
+  - name: "Stackover Flow"
+    link:
+    uesrname:
+    icon: "fab fa-stack-overflow"

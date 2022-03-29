@@ -1,2 +1,1 @@
-# Proximo proyecto ✨ 
-En etapa de planeación
+# sonya-c.github.io

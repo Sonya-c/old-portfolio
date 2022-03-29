@@ -1,0 +1,31 @@
+{% if page.lang == "es" %}
+  {% assign navigation = site.data.navigation.es %}
+{% else %}
+  {% assign navigation = site.data.navigation.en %}
+{% endif %}
+
+<nav>
+  <div class="nav-header">
+    <!-- <button>|||</button> -->
+  </div>
+
+  <div class="nav-body collapse">
+    {% for item in navigation %}
+      
+    {% if page.permalink == item.link %}      
+        {% assign active = "active" %} 
+      {% else %}
+        {% assign active = "" %} 
+      {% endif %}
+      
+      <a
+        href="{{ item.link | | absolute_url }}"
+        title="{{ item.name }}"
+        class="nav-link {{active}}">
+        
+        <span class="emoji">{{ item.emoji }}</span>
+        <span class="title">{{ item.name | capitalize}}</span>
+      </a>
+    {% endfor %}
+  </div>
+</nav>

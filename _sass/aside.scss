@@ -1,0 +1,68 @@
+@media screen and (max-width: 640px) {
+    aside {
+        height: fit-content;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 640px) {
+    aside {
+        width: 200px;
+    }
+}
+
+aside {
+    padding: 20px;
+    box-sizing: border-box;
+
+    .information {
+        text-align: center;
+
+        .my-photo {
+            margin: auto;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: solid 3px rgb(160, 22, 63);
+            background: rgb(224, 46, 100);
+            // background: linear-gradient(-45deg, #ee7752, , #23a6d5, #23d5ab);
+            background: linear-gradient(58deg, rgb(170, 33, 74), rgba(224, 47, 101, 1), rgba(233, 137, 47, 1), rgb(253, 157, 68));
+            background-size: 300% 300%;
+            animation: gradient 8s ease infinite;
+        }
+    }
+
+    .confi {
+        text-align: center;
+    }
+
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@mixin theme($name, $text-color, $link-color) {
+    html.#{$name} {
+        color: $text-color;
+
+        .social-media {
+            a {
+                color: $link-color;
+            }
+        }
+    }
+}
+
+@include theme('light', #202020, #a0163f);
+@include theme('dark', lightgray, #fd9d44);

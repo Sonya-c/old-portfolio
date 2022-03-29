@@ -1,0 +1,19 @@
+<aside>
+
+    <div class="information">
+        <img src="{{ site.data.info.photo | | absolute_url }}" alt="{{ site.data.info.name }}" class="my-photo"/>
+    
+        <h1 class="my-name">{{ site.data.info.name }}</h1>
+    </div>
+
+    <div class="body">
+        
+        <div class="confi">
+            {% include toggle-theme.html %}
+            {% include toggle-lang.html %}
+        </div>
+    
+        {% include nav.html %}
+    </div>
+
+</aside>
